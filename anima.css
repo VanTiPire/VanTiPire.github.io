@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'VincentFont';
+  src: url('font/CenturyOld.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'WriteFont';
+  src: url('font/Autography.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ItalicFont';
+  src: url('font/CenturyItalic.otf') format('opentype');
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#overlay.show-gal {
+  background-color: #21201c;
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#overlay.show-bio {
+  background-color: #d9d7d3; 
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.italic-text {
+  font-family: 'ItalicFont', serif;
+}
+
+@keyframes down {
+  17.8571428571% {
+    transform: translate(0, -100%);
+  }
+
+  17.8671428571% {
+    transform: translate(0, 460%);
+  }
+}
+
+@keyframes slide-title-in {
+    0% {
+      display: none;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      display: block;
+      opacity: 0.2;
+    }
+    100% {
+      display: block;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-nav-in {
+    0% {
+      display:none;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    1% {
+      display: flex;
+      transform: translateY(100%);
+      opacity:0;
+    }
+    100% {
+      display: flex;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-intro-master {
+    0% {
+      display: none;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      transform: translateY(-100%);
+    }
+ 
+    100% {
+      display: block;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-letter-in { 
+    0% {
+      display: none;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      transform: translateY(100%);
+    }
+    100% {
+      display: block;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes slide-card-in { 
+    0% {
+      display: none;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    1% {
+      display: flex;
+      transform: translateY(-100%);
+    }
+    100% {
+      display: flex;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  
+
+  @keyframes hover-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hover-bounce-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hover-bounce-left {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes hover-bounce-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-cards {
+    0% {
+      display: none;
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      transform: translateY(200%);
+    }
+
+    50% {
+      display: block;
+      opacity: 1;
+    }
+ 
+    100% {
+      display: block;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+ 
+ @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+ }
